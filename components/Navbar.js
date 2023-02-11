@@ -14,6 +14,7 @@ const handleClick = () => setClick(!click);
 const {user, logout} = UserAuth();
 const navigate = useNavigate();
 
+
 const handleSignOut = async () => {
     try {
       await logout()
@@ -52,8 +53,8 @@ const handleSignOut = async () => {
                 <button onClick={handleSignOut} className='btn_mobile'>Sign out</button>
             </div>
         ) : (<div>
-            <span className='hidden-nav-item'><Link to='signin'><li><button className='btn_mobile'>Login</button></li></Link></span>
-            <span className='hidden-nav-item'><Link to='signup1'><li><button className='btn2_mobile'>Sign up</button></li></Link></span>
+            <span className='hidden-nav-item'><Link to='signin'><li><button onClick={handleClick} className='btn_mobile'>Login</button></li></Link></span>
+            <span className='hidden-nav-item'><Link to='signup1'><li><button onClick={handleClick} className='btn2_mobile'>Sign up</button></li></Link></span>
         </div>)}
 </div>
             {/*<span className='hidden-nav-item'><Link to='signin'><li><button className='btn_mobile'>Login</button></li></Link></span>
@@ -69,8 +70,8 @@ const handleSignOut = async () => {
                 <button onClick={handleSignOut} className='btn'>Sign out</button>
             </div>
         ) : (<div className="btn-group">
-            <Link to='signin'><button className='btn'>Login</button></Link>
-            <Link to='signup1'><button className='btn2'>Sign up</button></Link>
+            <Link to='signin'><button onClick={handleClick} className='btn'>Login</button></Link>
+            <Link to='signup1'><button onClick={handleClick} className='btn2'>Sign up</button></Link>
         </div>)}
 
 
